@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class FauxGravitySubject : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody2D rb;
     FauxGravityBody planetCtrl;
 
     void Start()
     {
         planetCtrl = GameObject.FindGameObjectWithTag("Planet").GetComponent<FauxGravityBody>();
-        rb = GetComponent<Rigidbody>();
-        rb.useGravity = false;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
